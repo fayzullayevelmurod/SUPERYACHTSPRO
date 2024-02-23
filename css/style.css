@@ -21,13 +21,20 @@ body {
 a{
     text-decoration: none;
 }
-button {
+button{
+    cursor: pointer;
+}
+button,
+input {
     border: none;
     outline: none;
     background-color: transparent;
 }
 a,img,span,input,textarea,button,svg,path {
 	transition: .3s all ease;
+}
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .main-title{
@@ -43,6 +50,7 @@ a,img,span,input,textarea,button,svg,path {
     font-weight: 700;
     line-height: 22px;
     white-space: nowrap;
+    cursor: pointer;
 }
 .main-btn:hover{
     background: #2D2D55;
@@ -61,20 +69,73 @@ a,img,span,input,textarea,button,svg,path {
     align-items: center;
     justify-content: space-between;
 }
-.header-navs .header-logo{
+.logo{
     color: #FFF;
     font-size: 20px;
     font-weight: 700;
     line-height: 25px;
     letter-spacing: 0%;
 }
-.header-navs .header-contact{
+.logo:hover{
+    color: #2d2d55;
+}
+.header .header-contact{
     display: flex;
     align-items: center;
     gap: 20px;
 }
 .header-contact .head-contact__link:hover{
     transform: scale(1.1);
+}
+
+.header .header-mob{
+    position: fixed;
+    z-index: 10;
+    right: -200%;
+    top: 0;
+    height: 100vh;
+    width: 610px;
+    background-color: #FFF;
+    padding: 16px 58px;
+    transition: .3s ease all;
+}
+.header .header-mob.active{
+    right: 0;
+}
+.header .header-mob + .header-mob-bg{
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    opacity: 0;
+    transition: .3s ease all;
+}
+.header .header-mob.active + .header-mob-bg{
+    z-index: 9;
+    opacity: .7;
+}
+.header-mob .header-mob-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+.header-mob .header-mob__navs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;    
+}
+.header-mob .header-mob-link{
+    color: #333333;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 51px;
+}
+.header-mob .header-mob-link:hover{
+    color: #bd272d;
 }
 /* Header end */
 
@@ -115,7 +176,7 @@ a,img,span,input,textarea,button,svg,path {
     background-image: url(../images/charter-bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 110px 0 300px;
+    padding: 110px 0 260px;
     position: relative;
     margin-bottom: 48px;
 }
@@ -183,7 +244,8 @@ a,img,span,input,textarea,button,svg,path {
     font-size: 18px;
     line-height: 140%;
 }
-.about-content .about-img{
+.about-content .about-img,
+.about-content .about-img img{
     width: 100%;
 }
 /* About end */
@@ -203,6 +265,10 @@ a,img,span,input,textarea,button,svg,path {
     height: 1px;
     background-color: #A5AAC4;
     border-radius: 0;
+    opacity: 0;
+}
+.yachts-card:hover .swiper-pagination-bullet{
+    opacity: 1;
 }
 .yachts-card .swiper-pagination-bullet.swiper-pagination-bullet-active{
     background-color: #BD272D;
@@ -319,3 +385,316 @@ a,img,span,input,textarea,button,svg,path {
     background: rgb(189, 39, 45);
 }
 /* Yachts end */
+
+/* Request start */
+.request{
+    padding-bottom: 170px;
+}
+.request .request-content{
+    padding: 60px 70px;
+    border-radius: 15px;
+    background: #2d2d55;
+}
+.request-content .request-title{
+    margin-bottom: 20px;
+    color: #FFF;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 73px;
+}
+.request-content .form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.request-content .input-form-groups{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 21px;
+}
+.request-content .input-form-group{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    width: 33%;
+}
+.request-content .input-form-item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.request-content .input-form-item label{
+    color: #a7a8b5;
+    font-size: 18px;
+    line-height: 22px;
+}
+.request-content .input-form-item input,
+.request-content .input-form-item select{
+    box-sizing: border-box;
+    border: 1px solid #bcbcbf;
+    border-radius: 4px;
+    padding: 14px 17px 14px 15px;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+    height: 50px;
+    background-color: transparent;
+    outline: none;
+    color-scheme: dark;
+    width: 100%;
+}
+.request-content .input-form-item input::placeholder{
+    color: #FFF;
+}
+.request-content .input-form-item #dateInp{
+    width: 100%;
+}
+.request-content .select-form-item{
+    width: 40%;
+}
+.request-content .input-form-item select{
+    position: relative;
+    width: 100%;
+    
+}
+.request-content .input-form-item select option,
+.request-content .input-form-item select option.active{
+    background: #2d2d55;
+    cursor: pointer;
+}
+.request-content .price-form-item .input-form-item-inps{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.request-content .input-form-item-inps span{
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 22px;
+}
+.request-content .request-btn{
+    margin-left: auto;
+    padding: 14px 35px;
+}
+/* Request end */
+
+/* Destination start */
+.destination{
+    padding-bottom: 130px;
+}
+.destination .destination-top{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+.destination-top .destination-text{
+    color: #4b4b4b;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 140%;
+}
+.destination .destination-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.destination-cards .destination-card{
+    position: relative;
+    width: 100%;
+}
+.destination-card .destination-card-img,
+.destination-card .destination-card-img img {
+    width: 100%;
+}
+.destination-card .destination-card-info{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.destination-card .destination-card-info .destination-card-title{
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 2%;
+}
+.destination-card .destination-card-info .destination-card-text{
+    color: rgb(223, 223, 223);
+    font-size: 18px;
+    line-height: 140%;
+}
+.destination .swiper,
+.charter .swiper{
+    padding-bottom: 40px;
+}
+.destination .swiper-pagination,
+.charter .swiper-pagination{
+    gap: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.destination .swiper-pagination-bullet,
+.charter .swiper-pagination-bullet{
+    background: rgb(180, 196, 227);
+    width: 14px;
+    height: 14px;
+}
+.destination .swiper-pagination-bullet.swiper-pagination-bullet-active,
+.charter .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: rgb(189, 39, 45);
+}
+/* Destination end */
+
+/* Ship About start */
+.ship-about{
+    padding-bottom: 116px;
+}
+.ship-about .ship-about__content{
+    display: flex;
+    align-items: start;
+    gap: 45px;
+}
+.ship-about .ship-about__info{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.ship-about__info .ship-about__info-top{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ship-about__info .ship-about__info-top .ship-about-text{
+    color: #4b4b4b;
+    font-size: 18px;
+    line-height: 140%;
+}
+.ship-about__info .ship-about__items{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.ship-about__info .ship-about__item {
+    display: flex;
+    align-items: start;
+    gap: 24px;
+}
+.ship-about__info .ship-about__item .ship-about__item-num{
+    color: #000000;
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 41px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid rgb(189, 39, 45);
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 13px 8px;
+}
+
+.ship-about__info .ship-about__item .ship-about__item-info{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ship-about__info .ship-about__item .ship-about__item-title{
+    color: #000000;
+    font-size: 24px;
+    line-height: 29px;
+}
+.ship-about__info .ship-about__item .ship-about__item-text{
+    color: #4b4b4b;
+    font-size: 18px;
+    line-height: 22px;
+}
+/* Ship About end */
+
+/* Contact start */
+.contact{
+    padding-bottom: 120px;
+}
+.contact .contact-content{
+    position: relative;
+}
+.contact-content .contact-card{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.05);
+    background: rgb(255, 255, 255);
+    padding: 50px 80px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.contact-card .contact-card-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contact-card-info .contact-card-link{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.contact-card-info .contact-card-link:nth-child(3) {
+    gap: 7px;
+}
+.contact-card-info .contact-card-link a{
+    color: #4b4b4b;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 315px;
+}
+.contact-content .contact-map{
+    width: 80%;
+    height: 560px;
+    margin-left: auto;
+}
+.contact-content .contact-map iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+/* Contact end */
+
+
+
+
+
+/* Footer start */
+.footer{
+    background: #2a2a3b;
+    padding: 54px 0px 45px;
+}
+.footer .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.footer-content .footer-navs{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.footer-content .footer-nav-link{
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 19px;
+}
+/* Footer end */

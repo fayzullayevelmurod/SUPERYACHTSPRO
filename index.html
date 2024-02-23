@@ -20,7 +20,7 @@
         <header class="header">
             <div class="container">
                 <div class="header-navs">
-                    <a href="#!" class="header-logo">SUPERYACHTSPRO</a>
+                    <a href="#!" class="logo">SUPERYACHTSPRO</a>
 
                     <div class="header-contact">
                         <a href="#!" class="head-contact__link"><img src="images/icons/whatsap.svg" alt=""></a>
@@ -29,6 +29,26 @@
                     </div>
                 </div>
             </div>
+            <div class="header-mob">
+                <div class="header-mob-top">
+                    <a href="#!" class="logo head-mob-logo">SUPERYACHTSPRO</a>
+                    
+                    <div class="header-contact">
+                        <a href="#!" class="head-contact__link"><img src="images/icons/whatsap.svg" alt=""></a>
+                        <a href="#!" class="head-contact__link"><img src="images/icons/phone.svg" alt=""></a>
+                        <button class="head-mob-close"><img src="images/icons/close.svg" alt=""></button>
+                    </div>
+                </div>
+                <div class="header-mob__navs">
+                    <a href="#!" class="header-mob-link">Why Charter?</a>
+                    <a href="#!" class="header-mob-link">Who are we?</a>
+                    <a href="#!" class="header-mob-link">Yachts</a>
+                    <a href="#!" class="header-mob-link">Destinations</a>
+                    <a href="#!" class="header-mob-link">How to charter a yacht?</a>
+                    <a href="#!" class="header-mob-link">Contact Us</a>
+                </div>
+            </div>
+            <div class="header-mob-bg"></div>
         </header>
         <!-- Header end -->
 
@@ -70,8 +90,8 @@
                                         <div class="charter-img">
                                             <img src="images/icons/charter-icon2.svg" alt="">
                                         </div>
-                                        <span class="charter-item__title">Discover</span>
-                                        <p class="charter-item__text">incredible destinations</p>
+                                        <span class="charter-item__title">LIVE</span>
+                                        <p class="charter-item__text">unforgettable moments on board</p>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
@@ -79,8 +99,8 @@
                                         <div class="charter-img">
                                             <img src="images/icons/charter-icon3.svg" alt="">
                                         </div>
-                                        <span class="charter-item__title">Discover</span>
-                                        <p class="charter-item__text">incredible destinations</p>
+                                        <span class="charter-item__title">EXPERIENCE</span>
+                                        <p class="charter-item__text">world class service</p>
                                     </div>
                                 </div>
                             </div>
@@ -98,21 +118,27 @@
                         <div class="about-info">
                             <h1 class="about-title main-title">Who are we?</h1>
                             <div class="about-info-texts">
-                                <p class="about-info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                <p class="about-info-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                     do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
                                     dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                <p class="about-info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <p class="about-info-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                     do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
                                     dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
                             </div>
                         </div>
-                        <img src="images/about-img.png" alt="" class="about-img">
+                        <a href="#!" class="about-img">
+                            <img src="images/about-img.png" alt="">
+                        </a>
                     </div>
                 </div>
             </section>
@@ -586,14 +612,268 @@
                 <div class="container">
                     <div class="request-content">
                         <h1 class="request-title">Submit your request</h1>
-                        <form>
-                            <!-- .input -->
+                        <form class="form">
+                            <div class="input-form-groups">
+                                <div class="input-form-group">
+                                    <div class="input-form-item">
+                                        <label for="dateInp">Date</label>
+                                        <input id="dateInp" type="date">
+                                    </div>
+                                    <div class="input-form-item select-form-item">
+                                        <label>Guests</label>
+                                        <select >
+                                            <option>14+</option>
+                                            <option>15+</option>
+                                            <option>16+</option>
+                                            <option>17+</option>
+                                            <option>18+</option>
+                                            <option>19+</option>
+                                            <option>20+</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input-form-group">
+                                    <div class="input-form-item">
+                                        <label>Direction</label>
+                                        <select>
+                                            <option>Direction</option>
+                                            <option>Direction1</option>
+                                            <option>Direction2</option>
+                                            <option>Direction3</option>
+                                            <option>Direction4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input-form-group">
+                                    <div class="input-form-item price-form-item">
+                                        <label for="number1">Price</label>
+                                        <div class="input-form-item-inps">
+                                            <input id="number1" type="number" placeholder="From">
+                                            <span>-</span>
+                                            <input id="number2" type="number" placeholder="To">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-form-groups">
+                                <div class="input-form-group">
+                                    <div class="input-form-item">
+                                        <label for="name">Name</label>
+                                        <input id="name" type="text" placeholder="Name" required>
+                                    </div>
+                                </div>
+                                <div class="input-form-group">
+                                    <div class="input-form-item">
+                                        <label for="name">Phone</label>
+                                        <input id="name" type="number" placeholder="Phone" required>
+                                    </div>
+                                </div>
+                                <div class="input-form-group">
+                                    <div class="input-form-item">
+                                        <label for="name">E-mail</label>
+                                        <input id="name" type="email" placeholder="E-mail" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="request-btn main-btn">Submit</button>
                         </form>
                     </div>
                 </div>
             </section>
             <!-- Request end -->
+
+            <!-- Destination start -->
+            <section class="destination">
+                <div class="container">
+                    <div class="destination-content">
+                        <div class="destination-top">
+                            <h1 class="destination-title main-title">Destinations</h1>
+                            <p class="destination-text">Charter all over the world with Us</p>
+                        </div>
+
+                        <div class="swiper destinationSlide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="destination-cards">
+                                        <div class="destination-card">
+                                            <a href="#!" class="destination-card-img"><img src="images/destination-img1.png" alt=""></a>
+                                            <div class="destination-card-info">
+                                                <h3 class="destination-card-title">Mediterranean</h3>
+                                                <p class="destination-card-text">Mediterranean</p>
+                                            </div>
+                                        </div>
+                                        <div class="destination-card">
+                                            <a href="#!" class="destination-card-img"><img src="images/destination-img2.png" alt=""></a>
+                                            <div class="destination-card-info">
+                                                <h3 class="destination-card-title">Caribbean</h3>
+                                                <p class="destination-card-text">Caribbean & Bahamas</p>
+                                            </div>
+                                        </div>
+                                        <div class="destination-card">
+                                            <a href="#!" class="destination-card-img"><img src="images/destination-img3.png" alt=""></a>
+                                            <div class="destination-card-info">
+                                                <h3 class="destination-card-title">Creece</h3>
+                                                <p class="destination-card-text">Mediterranean</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="destination-cards">
+                                        <div class="destination-card">
+                                            <a href="#!" class="destination-card-img"><img src="images/destination-img4.png" alt=""></a>
+                                            <div class="destination-card-info">
+                                                <h3 class="destination-card-title">French Riviera</h3>
+                                                <p class="destination-card-text">Mediterranean</p>
+                                            </div>
+                                        </div>
+                                        <div class="destination-card">
+                                            <a href="#!" class="destination-card-img"><img src="images/destination-img5.png" alt=""></a>
+                                            <div class="destination-card-info">
+                                                <h3 class="destination-card-title">The Bahamas</h3>
+                                                <p class="destination-card-text">Caribbean & Bahamas</p>
+                                            </div>
+                                        </div>
+                                        <div class="destination-card">
+                                            <a href="#!" class="destination-card-img"><img src="images/destination-img6.png" alt=""></a>
+                                            <div class="destination-card-info">
+                                                <h3 class="destination-card-title">Groatia & Montenegro</h3>
+                                                <p class="destination-card-text">Mediterranean</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="destination-cards">
+                                        <div class="destination-card">
+                                            <a href="#!" class="destination-card-img"><img src="images/destination-img7.png" alt=""></a>
+                                            <div class="destination-card-info">
+                                                <h3 class="destination-card-title">Italy</h3>
+                                                <p class="destination-card-text">Mediterranean</p>
+                                            </div>
+                                        </div>
+                                        <div class="destination-card">
+                                            <a href="#!" class="destination-card-img"><img src="images/destination-img8.png" alt=""></a>
+                                            <div class="destination-card-info">
+                                                <h3 class="destination-card-title">Carsica & Sardinia</h3>
+                                                <p class="destination-card-text">Caribbean</p>
+                                            </div>
+                                        </div>
+                                        <div class="destination-card">
+                                            <a href="#!" class="destination-card-img"><img src="images/destination-img9.png" alt=""></a>
+                                            <div class="destination-card-info">
+                                                <h3 class="destination-card-title">Mallorca</h3>
+                                                <p class="destination-card-text">Mediterranean</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="destination-cards">
+                    </div>
+                </div>
+            </section>
+            <!-- Destination end -->
+
+            <!-- Ship about start -->
+            <section class="ship-about">
+                <div class="container">
+                    <div class="ship-about__content">
+                        <div class="ship-about__info">
+                            <div class="ship-about__info-top">
+                                <h1 class="ship-about-title main-title">How to charter a yacht?</h1>
+                                <p class="ship-about-text">Easy steps to book your luxury yacht charter</p>
+                            </div>
+                            <div class="ship-about__items">
+                                <div class="ship-about__item">
+                                    <div class="ship-about__item-num">01</div>
+                                    <div class="ship-about__item-info">
+                                        <h3 class="ship-about__item-title">Lorem ipsum dolor sit amet</h3>
+                                        <p class="ship-about__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                                    </div>
+                                </div>
+                                <div class="ship-about__item">
+                                    <div class="ship-about__item-num">02</div>
+                                    <div class="ship-about__item-info">
+                                        <h3 class="ship-about__item-title">Lorem ipsum dolor sit amet</h3>
+                                        <p class="ship-about__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                                    </div>
+                                </div>
+                                <div class="ship-about__item">
+                                    <div class="ship-about__item-num">03</div>
+                                    <div class="ship-about__item-info">
+                                        <h3 class="ship-about__item-title">Lorem ipsum dolor sit amet</h3>
+                                        <p class="ship-about__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                                    </div>
+                                </div>
+                                <div class="ship-about__item">
+                                    <div class="ship-about__item-num">04</div>
+                                    <div class="ship-about__item-info">
+                                        <h3 class="ship-about__item-title">Lorem ipsum dolor sit amet</h3>
+                                        <p class="ship-about__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                                    </div>
+                                </div>
+                                <div class="ship-about__item">
+                                    <div class="ship-about__item-num">05</div>
+                                    <div class="ship-about__item-info">
+                                        <h3 class="ship-about__item-title">Lorem ipsum dolor sit amet</h3>
+                                        <p class="ship-about__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#!" class="ship-about-img"><img src="images/ship-about-img.png" alt=""></a>
+                    </div>
+                </div>
+            </section>
+            <!-- Ship about end -->
+
+            <section class="contact">
+                <div class="container">
+                    <div class="contact-content">
+                        <div class="contact-card">
+                            <h1 class="contact-title main-title">Contuct us</h1>
+                            <div class="contact-card-info">
+                                <div class="contact-card-link">
+                                    <img src="images/icons/location.svg" alt="">
+                                    <a href="#!">Lorem ipsum dolor sit amet, consectetur adipiscing </a>
+                                </div>
+                                <div class="contact-card-link">
+                                    <img src="images/icons/ftr-phone.svg" alt="">
+                                    <a href="tel:+7 843 843 843 8">+7 843 843 843 8 </a>
+                                </div>
+                                <div class="contact-card-link">
+                                    <img src="images/icons/ftr-whatsap.svg" alt="">
+                                    <a href="tel:+7 843 843 843 8">+7 843 843 843 8 </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-map">
+                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=dubai+()&amp;t=&amp;z=7&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <a href="#!" class="logo">SUPERYACHTSPRO</a>
+
+                    <div class="footer-navs">
+                        <a href="#1" class="footer-nav-link">Why Charter?</a>
+                        <a href="#1" class="footer-nav-link">Who are we?</a>
+                        <a href="#1" class="footer-nav-link">Yachts</a>
+                        <a href="#1" class="footer-nav-link">Destinations</a>
+                        <a href="#1" class="footer-nav-link">How to charter a yacht?</a>
+                        <a href="#1" class="footer-nav-link">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
 
