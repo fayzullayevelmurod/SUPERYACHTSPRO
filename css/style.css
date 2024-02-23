@@ -1,0 +1,321 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #4B4B4B;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+a{
+    text-decoration: none;
+}
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+a,img,span,input,textarea,button,svg,path {
+	transition: .3s all ease;
+}
+
+.main-title{
+    color: #2d2d55;
+    font-size: 60px;
+    font-weight: 500;
+}
+.main-btn{
+    border-radius: 33px;
+    background: #bd272d;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    white-space: nowrap;
+}
+.main-btn:hover{
+    background: #2D2D55;
+}
+
+/* Header start */
+.header{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 16px 0;
+}
+.header .header-navs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-navs .header-logo{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0%;
+}
+.header-navs .header-contact{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header-contact .head-contact__link:hover{
+    transform: scale(1.1);
+}
+/* Header end */
+
+/* Home start */
+.home{
+    background-image: url(../images/home-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 266px 0 162px;
+}
+.home .home-content{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.home .home-title{
+    color: #FFF;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 73px;
+    max-width: 636px;
+}
+.home .home-text{
+    color: #FFF;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 525px;
+    margin-top: 10px;
+}
+.home .home-link{
+    padding: 14px 35px;
+    margin: 0 auto 0 0;
+}
+/* Home end */
+
+/* Charter start */
+.charter{
+    background-image: url(../images/charter-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 110px 0 300px;
+    position: relative;
+    margin-bottom: 48px;
+}
+.charter .charter-title{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.charter .charter-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+.charter-item .charter-img{
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.05);
+    background: rgb(255, 255, 255);
+    width: 69px;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 19px;
+}
+.charter-item .charter-item__title{
+    color: #000000;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+.charter-item .charter-item__text{
+    color: #4b4b4b;
+    font-size: 18px;
+    line-height: 22px;
+}
+/* Charter end */
+
+/* About start */
+.about{
+    padding-bottom: 191px;
+}
+.about .about-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 105px;
+}
+.about-content .about-title{
+    text-align: start;
+}
+.about-content .about-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 525px;
+}
+.about-info .about-info-texts{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.about-info .about-info-text{
+    color: #4b4b4b;
+    font-size: 18px;
+    line-height: 140%;
+}
+.about-content .about-img{
+    width: 100%;
+}
+/* About end */
+
+/* Yachts start */
+.yachts{
+    padding-bottom: 130px;
+}
+.yachts .yachts-cards{
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    gap: 20px;
+}
+.yachts-card .swiper-pagination-bullet{
+    width: 64px;
+    height: 1px;
+    background-color: #A5AAC4;
+    border-radius: 0;
+}
+.yachts-card .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: #BD272D;
+}
+.yachts-card .yacht-card-info{
+    padding: 20px 8px 28px 20px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+    margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.yachts-card .yachts-img img,
+.yachts-card .yachts-img{
+    width: 100%;
+}
+.yacht-card-info .yacht-card-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.yacht-card-info .yacht-card-top .yacht-card__top-icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.yacht-card-info .yacht-card-top .yacht-card__top-icon{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.yacht-card-info .yacht-card__top-icon span,
+.yacht-card-info .yacht-card__price{
+    color: #a0a0a0;
+    font-size: 14px;
+    line-height: 140%;
+}
+.yacht-card-info .yacht-card-title{
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 2%;
+}
+.yacht-card-info .yacht-card-title:hover{
+    color: #bd272d;
+}
+.yacht-card-info .yacht-card__price b{
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 2%;
+}
+.yacht-card-info .yacht-card__price span{
+    color: #2d2d2d;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 140%;
+}
+.yachts .yachts-big-card{
+    position: relative;
+}
+.yachts-big-card .yachts-big-card-img{
+    width: 100%;
+    height: 100%;
+}
+.yachts-big-card .yachts-big-card-info {
+    position: absolute;
+    top: 47px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 52px;
+}
+.yachts-big-card .yachts-big-card-info h3{
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 2%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.yachts-big-card .yachts-big-card-info p{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.yachts-big-card .yachts-big-card-info .big-card-link{
+    padding: 15px 30px;
+}
+.yachts .yachts-more-btn{
+    width: 100%;
+    padding: 14px 30px;
+    border-radius: 33px;
+    background: #2d2d55;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+}
+.yachts .yachts-more-btn:hover{
+    background: rgb(189, 39, 45);
+}
+/* Yachts end */
