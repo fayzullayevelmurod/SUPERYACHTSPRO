@@ -145,9 +145,14 @@ var customBigSlide2 = new Swiper(".customBigSlide2", {
 
 
 // Datepicker
+// $(function () {
+//     $("#datepicker").datepicker({
+//         dateFormat: "dd.mm.yy",
+//         showAnim: "fadeIn" // Bu qatorni qo'shib ko'ring
+//     });
+// });
 $(function () {
     $("#datepicker").datepicker({
-        dateFormat: "dd.mm.yy",
-        duration: "fast"
+        dateFormat: "dd.mm.yy"
     });
 });
