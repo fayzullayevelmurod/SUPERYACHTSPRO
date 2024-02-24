@@ -128,8 +128,6 @@ var customBigSlide1 = new Swiper(".customBigSlide1", {
 });
 var customBigSlide2 = new Swiper(".customBigSlide2", {
     spaceBetween: 10,
-    slidesPerView: 1.5,
-    centeredSlides: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -137,4 +135,14 @@ var customBigSlide2 = new Swiper(".customBigSlide2", {
     thumbs: {
         swiper: customBigSlide1,
     },
+    breakpoints: {
+        300: {
+            slidesPerView: 1.5,
+            centeredSlides: true,
+        },
+        776: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+    }
 });
