@@ -12,6 +12,10 @@ body {
     overflow-x: hidden;
 }
 
+.wrapper{
+    overflow-x: hidden;
+}
+
 .container {
     max-width: 1240px;
     margin: 0 auto;
@@ -260,6 +264,9 @@ input::-webkit-inner-spin-button {
     grid-template-columns: 32% 32% 32%;
     gap: 20px;
 }
+.yachts-card.d-none{
+    display: none;
+}
 .yachts-card .swiper-pagination-bullet{
     width: 64px;
     height: 1px;
@@ -453,12 +460,11 @@ input::-webkit-inner-spin-button {
     width: 100%;
 }
 .request-content .select-form-item{
-    width: 40%;
+    width: 130px;
 }
 .request-content .input-form-item select{
     position: relative;
     width: 100%;
-    
 }
 .request-content .input-form-item select option,
 .request-content .input-form-item select option.active{
@@ -672,10 +678,6 @@ input::-webkit-inner-spin-button {
 }
 /* Contact end */
 
-
-
-
-
 /* Footer start */
 .footer{
     background: #2a2a3b;
@@ -696,5 +698,320 @@ input::-webkit-inner-spin-button {
     color: #ffffff;
     font-size: 16px;
     line-height: 19px;
+    white-space: nowrap;
 }
 /* Footer end */
+
+
+/* Custom modal start */
+.custom-modal{
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: -200%;
+    height: 100vh;
+    width: 1130px;
+    transition: .5s ease all;
+}
+.custom-modal.active{
+    left: 0;
+}
+.custom-modal.active + .custom-modal-bg{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    background: rgb(0, 0, 0);
+    opacity: 0.7;
+    z-index: 9;
+}
+.custom-modal .custom-modal__close{
+    position: absolute;
+    right: -62px;
+    top: 50px;
+}
+.custom-modal__content::-webkit-scrollbar {
+    width: 0;   
+}
+.custom-modal .custom-modal__content{
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.05);
+    background: rgb(255, 255, 255);
+    padding: 100px 105px 125px 100px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.custom-modal__content .custom-modal__top{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+.custom-modal__top .custom-modal__top-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.custom-modal__top-info .custom-modal__price b{
+    color: #000000;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 2%;
+}
+.custom-modal__top-info .custom-modal__price span{
+    color: #2d2d2d;
+    font-size: 18px;
+    line-height: 140%;
+}
+.custom-modal__top-info .custom-modal__top-link{
+    color: #2d2d2d;
+    font-size: 18px;
+    line-height: 140%;
+}
+.custom-modal__content .custom-slider{
+    padding-bottom: 40px;
+}
+.custom-modal__content .custom-slider__big{
+    display: flex;
+    align-items: start;
+    gap: 21px;
+}
+.custom-slider__big .swiper{
+    margin: 0;
+}
+.custom-slider__big .custom-swiper__big-wrap{
+    max-width: 778px;
+    height: 484px;
+}
+.custom-slider__big img{
+    width: 100%;
+}
+.custom-slider__big .custom-swiper__big-mini{
+    width: 128px;
+    display: flex;
+    flex-direction: column;
+    transform: translate3d(0, 0, 0) !important;
+    gap: 9px;
+}
+.custom-slider__big .custom-swiper__big-mini .swiper-slide,
+.custom-slider__big .custom-swiper__big-mini .swiper-slide img{
+    width: 128px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.custom-swiper__big-mini .swiper-slide img{
+    border: 2px solid transparent;
+}
+.custom-swiper__big-mini .swiper-slide.swiper-slide-thumb-active img{
+    border: 2px solid #BD272D;
+}
+
+.custom-modal__content .custom-modal__info{
+    padding: 40px 0;
+    border-top: 1px solid rgb(164, 164, 164);
+    border-bottom: 1px solid rgb(164, 164, 164);
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+}
+.custom-modal__info .custom-modal__info-items{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.custom-modal__info .custom-modal__info-item{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.custom-modal__info .custom-modal__info-item span{
+    color: #a0a0a0;
+    font-size: 18px;
+    line-height: 140%;
+}
+.custom-modal__info .custom-modal__info-item b{
+    color: #2d2d2d;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.custom-modal__content .custom-modal__keys{
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    padding: 40px 0;
+    border-bottom: 1px solid rgb(164, 164, 164);
+}
+.custom-modal__keys .custom-modal__key-title{
+    color: #000000;
+    font-size: 24px;
+    line-height: 29px;
+}
+.custom-modal__content .custom-keys-items{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 20px
+}
+.custom-modal__keys .custom-keys-item{
+    display: flex;
+    flex-direction: column;
+    max-width: 256px;
+    gap: 11px;
+}
+.custom-modal__keys .custom-keys-item img{
+    width: 33px;
+    height: 33px;
+}
+.custom-modal__keys .custom-keys-item p{
+    color: #4b4b4b;
+    font-size: 18px;
+    line-height: 140%;
+}
+
+.custom-modal__content .custom-modal__form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    gap: 30px;
+}
+.custom-modal__form .custom-modal__form-top{
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+.custom-modal__form .custom-modal__form-top p{
+    max-width: 769px;
+    color: #4b4b4b;
+    font-size: 18px;
+    line-height: 140%;
+}
+.custom-modal__form .custom-modal__group{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+}
+.custom-modal__group .custom-modal__group-inp{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.custom-modal__group .custom-modal__group-inp label{
+    color: #4b4b4b;
+    font-size: 18px;
+    line-height: 22px;
+}
+.custom-modal__group .custom-modal__group-inp input{
+    color: #4b4b4b;
+    font-size: 18px;
+    line-height: 22px;
+    width: 100%;
+    padding: 14px 15px;
+    box-sizing: border-box;
+    border: 1px solid rgb(188, 188, 191);
+    border-radius: 4px;
+}
+.custom-modal__form .custom-modal__textare{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.custom-modal__form .custom-modal__textare label{
+    color: #4b4b4b;
+    font-size: 18px;
+    line-height: 22px;
+}
+.custom-modal__form .custom-modal__textare textarea{
+    resize: none;
+    min-height: 100px;
+    width: 100%;
+    padding: 14px 15px;
+    color: #4b4b4b;
+    font-size: 18px;
+    line-height: 22px;
+    box-sizing: border-box;
+    border: 1px solid rgb(188, 188, 191);
+    border-radius: 4px;
+}
+.custom-modal__form .custom-modal__textare textarea:focus{
+    outline: none;
+}
+.custom-modal__form .custom-modal__btns{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+.custom-modal__form .custom-modal__btn{
+    padding: 14px 35px;
+    height: 50px;
+}
+.custom-modal__form .custom-modal__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 35px;
+    box-sizing: border-box;
+    border: 1px solid rgb(189, 39, 45);
+    border-radius: 33px;
+    height: 50px;    
+    color: #232323;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 5%;
+    text-transform: uppercase;
+}
+.custom-modal__form  .custom-modal__back{
+    padding: 14px 35px;
+    width: 100%;
+    height: 50px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #232323;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 5%;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    border: 1px solid rgb(189, 39, 45);
+    border-radius: 33px;
+}
+/* Custom modal end */
+
+
+
+/* Media query */
+@media only screen and (max-width: 1250px){
+    .custom-modal .custom-modal__content {
+        padding: 65px 50px 90px 50px;
+    }
+    .custom-modal {
+        width: 810px;
+    }
+    .custom-slider__big .custom-swiper__big-mini .swiper-slide, 
+    .custom-slider__big .custom-swiper__big-mini .swiper-slide img{
+        width: 95px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .ship-about-img{
+        display: none;
+    }
+    .request-content .input-form-group{
+        width: 100%;
+    }
+    .footer-content .footer-navs {
+        gap: 25px;
+    }
+}
