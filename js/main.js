@@ -13,6 +13,7 @@ let headerOpen = document.querySelector('.head-contact__btn');
 let headerClose = document.querySelector('.head-mob-close');
 let headerMenuBg = document.querySelector('.header-mob-bg');
 let headerMenu = document.querySelector('.header-mob');
+let headerMenuLink = document.querySelectorAll('.header-mob-link');
 
 headerOpen.addEventListener('click', toggleMenu);
 headerClose.addEventListener('click', toggleMenu);
@@ -22,6 +23,12 @@ function toggleMenu() {
     headerMenu.classList.toggle('active');
     headerMenuBg.classList.toggle('active');
 }
+headerMenuLink.forEach(function (item) {
+    item.addEventListener('click', function (e) {
+        headerMenu.classList.remove('active');
+        headerMenuBg.classList.remove('active');
+    });
+});
 
 // Custom modal open
 let yachtsCard = document.querySelectorAll('.yachts-img img');
@@ -42,7 +49,6 @@ customModalClose.forEach(function (btn) {
 customModalBg.addEventListener('click', function (e) {
     customModal.classList.remove('active');
 });
-
 headerOpen.addEventListener('click', function (e) {
     customModal.classList.remove('active');
 });
@@ -54,17 +60,6 @@ document.querySelector('.yachts-more-btn').addEventListener('click', function ()
         card.classList.remove('d-none');
     });
 });
-
-
-// Input date value
-document.addEventListener('DOMContentLoaded', function () {
-    let inputElement = document.getElementById('dateInp');
-
-    let newValue = '2024-04-12';
-
-    inputElement.value = newValue;
-});
-
 
 // Swiper sliders
 let charterSlide = new Swiper(".charterSlide", {
@@ -145,4 +140,14 @@ var customBigSlide2 = new Swiper(".customBigSlide2", {
             spaceBetween: 20,
         },
     }
+});
+
+
+
+// Datepicker
+$(function () {
+    $("#datepicker").datepicker({
+        dateFormat: "dd.mm.yy",
+        duration: "fast"
+    });
 });

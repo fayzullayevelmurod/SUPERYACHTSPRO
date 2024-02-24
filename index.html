@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="font/gilroy/stylesheet.css">
     <!-- Swiper css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+    <!-- Datepicker css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css">
     <!-- Style.css -->
     <link rel="stylesheet" href="css/style.css">
     <title>Title</title>
@@ -40,12 +42,12 @@
                     </div>
                 </div>
                 <div class="header-mob__navs">
-                    <a href="#!" class="header-mob-link">Why Charter?</a>
-                    <a href="#!" class="header-mob-link">Who are we?</a>
-                    <a href="#!" class="header-mob-link">Yachts</a>
-                    <a href="#!" class="header-mob-link">Destinations</a>
-                    <a href="#!" class="header-mob-link">How to charter a yacht?</a>
-                    <a href="#!" class="header-mob-link">Contact Us</a>
+                    <a href="#charter" class="header-mob-link">Why Charter?</a>
+                    <a href="#about" class="header-mob-link">Who are we?</a>
+                    <a href="#yachts" class="header-mob-link">Yachts</a>
+                    <a href="#destination" class="header-mob-link">Destinations</a>
+                    <a href="#ship-about" class="header-mob-link">How to charter a yacht?</a>
+                    <a href="#contact" class="header-mob-link">Contact Us</a>
                 </div>
             </div>
             <div class="header-mob-bg"></div>
@@ -70,7 +72,7 @@
             <!-- Home end -->
 
             <!-- Charter start -->
-            <section class="charter">
+            <section class="charter" id="charter">
                 <div class="container">
                     <div class="charter-content">
                         <h1 class="charter-title main-title">Why Charter?</h1>
@@ -112,7 +114,7 @@
             <!-- Charter end -->
 
             <!-- About start -->
-            <section class="about">
+            <section class="about" id="about">
                 <div class="container">
                     <div class="about-content">
                         <div class="about-info">
@@ -145,7 +147,7 @@
             <!-- About end -->
 
             <!-- Yachts start -->
-            <section class="yachts">
+            <section class="yachts" id="yachts">
                 <div class="container">
                     <div class="yachts-content">
                         <h1 class="yachts-title main-title">Yachts</h1>
@@ -736,7 +738,7 @@
                                 <div class="input-form-group">
                                     <div class="input-form-item">
                                         <label for="dateInp">Date</label>
-                                        <input id="dateInp" type="date" required>
+                                        <input id="datepicker" readonly type="text" name="dateInp" value="12.04.2024">
                                     </div>
                                     <div class="input-form-item select-form-item">
                                         <label>Guests</label>
@@ -802,7 +804,7 @@
             <!-- Request end -->
 
             <!-- Destination start -->
-            <section class="destination">
+            <section class="destination" id="destination">
                 <div class="container">
                     <div class="destination-content">
                         <div class="destination-top">
@@ -897,7 +899,7 @@
             <!-- Destination end -->
 
             <!-- Ship about start -->
-            <section class="ship-about">
+            <section class="ship-about" id="ship-about">
                 <div class="container">
                     <div class="ship-about__content">
                         <div class="ship-about__info">
@@ -949,7 +951,7 @@
             </section>
             <!-- Ship about end -->
 
-            <section class="contact">
+            <section class="contact" id="contact">
                 <div class="container">
                     <div class="contact-content">
                         <div class="contact-card">
@@ -1166,7 +1168,11 @@
 
 
 
-
+    
+    <!-- Jquery js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Datepicker js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js"></script>
     <!-- Swiper js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <!-- Main js -->

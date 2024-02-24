@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 *{
     padding: 0;
     margin: 0;
@@ -10,6 +13,7 @@ body {
     font-weight: 400;
     color: #4B4B4B;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .wrapper{
@@ -63,10 +67,19 @@ input::-webkit-inner-spin-button {
 /* Header start */
 .header{
     position: absolute;
+    z-index: 15;
     width: 100%;
     left: 0;
     top: 0;
     padding: 16px 0;
+}
+.header.active {
+    position: fixed;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.05);
+    background: rgb(255, 255, 255);
+}
+.header.active .logo{
+    color: #2d2d55;
 }
 .header .header-navs {
     display: flex;
@@ -440,6 +453,23 @@ input::-webkit-inner-spin-button {
     gap: 10px;
     width: 100%;
 }
+.datepicker-panel>ul>li{
+    font-weight: 600;
+}
+.datepicker-panel>ul>li.muted{
+    opacity: 0 !important;
+}
+.datepicker-panel>ul>li:hover{
+    background-color: #ded9d9;
+}
+.datepicker-container {
+    z-index: 2 !important;
+}
+.datepicker-panel>ul>li.picked, 
+.datepicker-panel>ul>li.picked:hover {
+    color: #39f;
+    background-color: rgba(51, 153, 255, 0.236);
+}
 .request-content .input-form-item label{
     color: #a7a8b5;
     font-size: 18px;
@@ -461,6 +491,7 @@ input::-webkit-inner-spin-button {
     color-scheme: dark;
     width: 100%;
 }
+
 .request-content .input-form-item input::placeholder{
     color: #FFF;
 }
@@ -719,7 +750,7 @@ input::-webkit-inner-spin-button {
 /* Custom modal start */
 .custom-modal{
     position: fixed;
-    z-index: 11;
+    z-index: 17;
     top: 0;
     left: -400%;
     height: 100vh;
@@ -737,7 +768,7 @@ input::-webkit-inner-spin-button {
     top: 0;
     background: rgb(0, 0, 0);
     opacity: 0.7;
-    z-index: 9;
+    z-index: 16;
 }
 .custom-modal .custom-modal__close{
     position: absolute;
@@ -1023,6 +1054,7 @@ input::-webkit-inner-spin-button {
         max-width: 215px;
     }
 }
+
 @media only screen and (max-width: 1100px) {
     .home{
         background-position: right;
@@ -1144,14 +1176,6 @@ input::-webkit-inner-spin-button {
         padding: 10px 0;
         z-index: 99;
     }
-    .header.active {
-        position: fixed;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.05);
-        background: rgb(255, 255, 255);
-    }
-    .header.active .logo{
-        color: #2d2d55;
-    }
     .header .header-mob{
         width: auto;
     }
@@ -1203,6 +1227,7 @@ input::-webkit-inner-spin-button {
     }
     .custom-modal{
         width: 100%;
+        z-index: 14;
     }
     .custom-slider__big .swiper{
         height: auto;
@@ -1214,6 +1239,7 @@ input::-webkit-inner-spin-button {
     .custom-modal__form .custom-modal__back{
         display: flex;
     }
+    
     
 }
 
