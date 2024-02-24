@@ -1,3 +1,13 @@
+// header scroll
+window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+    if (window.scrollY > 0) {
+        header.classList.add('active');
+    } else {
+        header.classList.remove('active');
+    }
+});
+
 // Header menu 
 let headerOpen = document.querySelector('.head-contact__btn');
 let headerClose = document.querySelector('.head-mob-close');
@@ -24,20 +34,23 @@ yachtsCard.forEach(function (item) {
         customModal.classList.add('active');
     });
 });
-
 customModalClose.forEach(function (btn) {
     btn.addEventListener('click', function (e) {
-        customModal.classList.remove('active'); 
+        customModal.classList.remove('active');
     });
 });
 customModalBg.addEventListener('click', function (e) {
-    customModal.classList.remove('active'); 
+    customModal.classList.remove('active');
+});
+
+headerOpen.addEventListener('click', function (e) {
+    customModal.classList.remove('active');
 });
 
 // Yachts card more
-document.querySelector('.yachts-more-btn').addEventListener('click', function() {
+document.querySelector('.yachts-more-btn').addEventListener('click', function () {
     const yachtsCards = document.querySelectorAll('.yacht-card.d-none');
-    yachtsCards.forEach(function(card) {
+    yachtsCards.forEach(function (card) {
         card.classList.remove('d-none');
     });
 });
@@ -115,6 +128,8 @@ var customBigSlide1 = new Swiper(".customBigSlide1", {
 });
 var customBigSlide2 = new Swiper(".customBigSlide2", {
     spaceBetween: 10,
+    slidesPerView: 1.5,
+    centeredSlides: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
