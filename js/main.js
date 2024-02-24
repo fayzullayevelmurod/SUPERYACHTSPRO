@@ -36,12 +36,11 @@ customModalBg.addEventListener('click', function (e) {
 
 // Yachts card more
 document.querySelector('.yachts-more-btn').addEventListener('click', function() {
-    const yachtsCards = document.querySelectorAll('.yachts-card.d-none');
+    const yachtsCards = document.querySelectorAll('.yacht-card.d-none');
     yachtsCards.forEach(function(card) {
         card.classList.remove('d-none');
     });
 });
-
 
 
 // Input date value
@@ -52,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     inputElement.value = newValue;
 });
-
 
 
 // Swiper sliders
@@ -96,7 +94,7 @@ let destinationSlide = new Swiper(".destinationSlide", {
             slidesPerView: 1,
             spaceBetween: 15,
         },
-        780: {
+        776: {
             slidesPerView: 2,
             spaceBetween: 20,
         },
